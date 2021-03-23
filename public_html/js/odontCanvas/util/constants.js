@@ -7,6 +7,7 @@
  *
  * Contributors:
  *    Bardur Thomsen <https://github.com/bardurt> - initial API and implementation and/or initial documentation
+ *    Christian Garcia <https://github.com/chdgp> - Create const data
  */
 
 /**
@@ -97,6 +98,48 @@ function Constants() {
         this.SUPERFICIE_DESGASTADA,
         this.SEMI_IMPACTACI0N
     ];
+    
+    this.trata_dnt={
+    2:'CORONA_DEFINITIVA',
+    3:'CORONA_TEMPORAL',
+    4:'DIENTE_AUSENTE',
+    5:'FRACTURA',
+    8:'DIASTEMA',
+    9:'DIENTE_EXTRUIDO',
+    10:'DIENTE_EN_CLAVIJA',
+    12:'PROTESIS_REMOVIBLE',
+    13:'MIGRACION',
+    14:'GIROVERSION',
+    15:'FUSION',
+    16:'REMANENTE_RADICULAR',
+    20:'DIENTE_INTRUIDO',
+    23:'ORTONDICO_REMOVIBLE',
+    24:'DIENTE_EN_ERUPCION',
+    25:'TRANSPOSICION_LEFT',
+    26:'TRANSPOSICION_RIGHT',
+    27:'SUPER_NUMERARIO',
+    28:'PULPAR',
+    29:'PROTESIS_TOTAL',
+    30:'PERNO_MUNON',
+    31:'EDENTULOA_TOTAL',
+    32:'ORTODONTICO_FIJO_END',
+    33:'ORTODONTICO_FIJO_CENTER',
+    34:'PROTESIS_FIJA_LEFT',
+    35:'PROTESIS_FIJA_CENTER',
+    36:'PROTESIS_FIJA_RIGHT',
+    6:'IMPLANTE',
+    17:'MACRODONCIA',
+    18:'MICRODONCIA',
+    19:'IMPACTACION',
+    21:'DIENTE_ECTOPICO',
+    22:'DIENTE_DISCR0MICO',
+    37:'SUPERFICIE_DESGASTADA',
+    38:'SEMI_IMPACTACI0N',
+};
+this.diente_tra={
+    1:'CARIES',
+    11:'CURACION'
+ };
     /**
      * Method to check if a damage is writable, is text only
      * @param {type} arg id of the damage
