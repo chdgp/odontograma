@@ -12,6 +12,7 @@
             }
         </style>
         <script src="js/odontCanvas/core/engine.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </head>
     <body oncontextmenu="return false;">
         <canvas id="canvas" width="648" height="420"></canvas>
@@ -48,9 +49,47 @@
             
             engine.toggleObserverState(true);
             
-            observer = function(id){
-              
-                window.alert("Clicked " + id);
+        observer = function(id){
+          var res=id.toString()
+          var lnwt=res.length;
+                 if (lnwt===4) {
+                        var res = id.split("_");
+                                                Swal.fire({
+                          title: 'Select field validation',
+                          input: 'select',
+                          inputOptions: data.diente_tra,
+                          inputPlaceholder: 'Seleccionar',
+                          showCancelButton: true,
+                          inputValidator: (value) => {
+                            return new Promise((resolve) => {
+                              if (value != '') {
+                                engine.load(parseInt(res[0]),value,String(res[1]),'');   
+                                resolve();
+                              } 
+                            })
+                          }
+                        })
+
+                    }else{
+                        Swal.fire({
+                          title: 'Select field validation',
+                          input: 'select',
+                          inputOptions: data.trata_dnt,
+                          inputPlaceholder: 'Seleccionar',
+                          showCancelButton: true,
+                          inputValidator: (value) => {
+                            return new Promise((resolve) => {
+                              if (value != '') {
+                                engine.load(id,value,'0','');   
+                                resolve();
+                              } 
+                            })
+                          }
+                        })
+
+
+                    }
+               // window.alert("Clickssed " + engine);
             };
             
             engine.setObserver(observer);
